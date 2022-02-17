@@ -1,17 +1,18 @@
 buat database dengan article
 
 berikut adalah daftar api endpoint :
-#get all data
+#no authorization header, pada header add accept : application/json#
+#get all data#
 Route::get('/article',[ArticlesController::class, 'index']);
 
-#get data by id
+#get data by id#
 Route::get('/article/{id}',[ArticlesController::class, 'show']);
 
-#add data
+#add data#
 Route::post('/article',[ArticlesController::class, 'store']);
 
-#update data
+#update data#
 Route::put('/article/{id}',[ArticlesController::class, 'update']);
 
-delelte data
+$delelte data#
 Route::delete('/article/{id}',[ArticlesController::class, 'destroy']);
