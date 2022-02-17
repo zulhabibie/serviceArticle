@@ -21,12 +21,7 @@ class ArticlesController extends Controller
     public function index()
     {
         $article = ArticleResource::collection(Article::orderBy('id', 'DESC')->paginate());
-
-        $response = [
-            'message' => 'List All Data',
-            'data'=> $article
-        ];
-
+        $response = $article;
         return response()->json($response, Response::HTTP_OK);
     }
 
@@ -64,8 +59,7 @@ class ArticlesController extends Controller
         try{
             $article = Article::create($request->all());
             $response = [
-                'message' => 'article created',
-                'data'=> $article
+                 $article
             ];
             return response()->json($response, Response::HTTP_CREATED);
         } catch(QueryException $e){
