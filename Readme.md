@@ -1,4 +1,4 @@
-buat database dengan article
+# buat database dengan article #
 # no authorization header, pada header add accept : application/json # </br>
 berikut adalah daftar api endpoint :
 # get all data#
